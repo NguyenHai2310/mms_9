@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* universal */
+$gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
@@ -22,6 +22,11 @@ textarea {
   }
 }
 
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -35,7 +40,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: $gray-light;
 }
 
 p {
@@ -43,47 +48,70 @@ p {
   line-height: 1.7em;
 }
 
+
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 }
 
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
-}
+/* footer */
 
 footer {
+  clear: both;
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
 }
-
-footer a {
-  color: #555;
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
 }
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
+.debug_dump {
+  clear: both;
   float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+  .alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
 }
 
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
 }
