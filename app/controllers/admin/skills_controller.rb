@@ -22,6 +22,7 @@ class Admin::SkillsController < ApplicationController
       flash[:success] = t "skill.add"
       redirect_to admin_skills_path
     else
+      flash[:error] = t "skill.add"
       render :new
     end
   end
