@@ -24,7 +24,7 @@ RSpec.describe Position, type: :model do
 
     context "Test abbreviation too long" do
       before {subject.abbreviation = Faker::Lorem.characters(256)}
-      it {is_expected.to hava(1).error.on(:abbreviation)}
+      it {is_expected.to have(1).error.on(:abbreviation)}
     end
   end
 end
