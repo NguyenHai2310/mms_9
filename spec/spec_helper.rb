@@ -16,14 +16,11 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-require 'devise'
+require "devise"
+require "capybara/rspec"
 
 RSpec.configure do |config|
-<<<<<<< HEAD
   config.include Devise::TestHelpers
-=======
-  config.include Devise::TestHelpers, :type => :controller
->>>>>>> test controller
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

@@ -1,10 +1,6 @@
 require "rails_helper"
 
-<<<<<<< HEAD
 RSpec.describe Admin::UsersController do
-=======
-RSpec.describe Admin::UsersController, type: :controller do
->>>>>>> test controller
   before do
     @admin_user = FactoryGirl.create :user, role: "admin"
     @other_user = FactoryGirl.create :user, role: "member"
@@ -44,11 +40,7 @@ RSpec.describe Admin::UsersController, type: :controller do
 
   describe "GET #show" do
     before {get :show, id: @other_user.id}
-<<<<<<< HEAD
     it {expect(response).to render_template "show"}
-=======
-    it{expect(response).to render_template "show"}
->>>>>>> test controller
   end
 
   describe "DELETE #destroy" do
